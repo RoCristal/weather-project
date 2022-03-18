@@ -6,7 +6,11 @@ export default function App() {
       Weather App
       <footer>
         Coded by Romina Cristaldo
-        <a href="https://github.com/RoCristal/weather-project" target="_blank">
+        <a
+          href="https://github.com/RoCristal/weather-project"
+          target="_blank"
+          rel="noreferrer"
+        >
           Open source on GitHub
         </a>
       </footer>
