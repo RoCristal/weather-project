@@ -12,6 +12,7 @@
 .weather-details {
   padding: 0px;
   margin-bottom: 30px;
+  text-transform: capitalize;
 }
 
 .weather h1 {

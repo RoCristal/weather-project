@@ -5,8 +5,8 @@ import "./App.css";
 export default function App() {
   return (
     <div className="App">
-      <div className="container">
-        <Weather />
+      <div className="container-fluid">
+        <Weather defaultCity="London" />
 
         <footer>
           Coded by Romina Cristaldo. {""}
