@@ -9,13 +9,13 @@ export default function App() {
         <Weather defaultCity="London" />
 
         <footer>
-          Coded by Romina Cristaldo. {""}
+          Coded by Romina Cristaldo. {""}Open source on
           <a
             href="https://github.com/RoCristal/weather-project"
             target="_blank"
             rel="noopener  noreferrer"
           >
-            Open source on GitHub
+            <strong> GitHub</strong>
           </a>
         </footer>
       </div>
