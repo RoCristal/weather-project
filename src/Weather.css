@@ -8,11 +8,10 @@
 }
 
 .search-bar,
-.weather-summary,
-.weather-details {
-  padding: 0px;
-  margin-bottom: 30px;
+.weather-summary {
   text-transform: capitalize;
+  margin: 5px;
+  padding: 10px;
 }
 
 .weather h1 {
@@ -27,25 +26,43 @@
 .weather li {
   list-style: none;
   font-size: 15px;
+  line-height: 25px;
+}
+.weather-detail {
+  margin: 5px;
+  padding: 10px;
 }
 
 canvas {
   margin-right: 10px;
+  float: left;
 }
 
-.weather .temperature {
-  font-weight: 600;
-  font-size: 40px;
-  height: 60px;
+.temperature {
+  float: left;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+  padding-left: 10px;
+}
+.tempValue {
+  font-size: 42px;
+  position: relative;
 }
 
-.weather .unit {
+.unit {
   font-size: 18px;
   position: relative;
-  top: -15px;
   margin-left: 5px;
+  top: -15px;
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
+  color: #51524e !important;
+  font-weight: 400 !important;
+}
+
+a:active {
+  font-weight: 600 !important;
 }

@@ -15,20 +15,25 @@ export default function WeatherDisplay(props) {
           <li>{props.data.description}</li>
         </ul>
       </div>
-      <div className="weather-details row">
-        <div className="col-6">
-          <WeatherIcons code={props.data.icon} size="60px" />
 
-          <span className="temperature">
-            <WeatherTemperature celsius={props.data.temperature} />
-          </span>
-        </div>
+      <div className="weather-detail">
+        <div className="row">
+          <div className="col col-12 col-sm-6">
+            <WeatherIcons code={props.data.icon} size="60px" />
 
-        <div className="col-6">
-          <ul>
-            <li>Humidity: {props.data.humidity}%</li>
-            <li>Wind: {Math.round(props.data.wind)} km/h</li>
-          </ul>
+            <div className="temperature">
+              <span className="tempValue">
+                <WeatherTemperature celsius={props.data.temperature} />
+              </span>
+            </div>
+          </div>
+
+          <div className="col col-12 col-sm-6">
+            <ul>
+              <li>Humidity: {props.data.humidity}%</li>
+              <li>Wind: {Math.round(props.data.wind)} km/h</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
