@@ -1,18 +1,39 @@
-import React from "react";
-import WeatherIcons from "./WeatherIcons";
+import React, { useState } from "react";
+
+import ForecastDay from "./ForecastDay";
+
 import "./ForecastDisplay.css";
+import axios from "axios";
 
 export default function ForecastDisplay(props) {
-  return (
-    <div className="row forecast">
-      <div className="col">
-        <div className="day">Mon</div>
-        <WeatherIcons code="09n" size="40px" />
-        <div className="temp">
-          <span className="max">19°C</span>
-          <span className="min">12°C</span>
+  const [ready, setReady] = useState(false);
+  let [forecast, setForecast] = useState(null);
+
+  function handleResponse(response) {
+    setForecast(response.data.daily);
+    setReady(true);
+  }
+
+  function search() {
+    let lat = props.data.lat;
+    let lon = props.data.lon;
+    const apiKey = "872f5f7a2f23b39c0dad793d7e25a56f";
+    let units = "metric";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude={part}&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  if (ready) {
+    console.log(forecast);
+    return (
+      <div className="row forecast">
+        <div className="col">
+          <ForecastDay data={forecast[1]} />
         </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    search();
+    return null;
+  }
 }

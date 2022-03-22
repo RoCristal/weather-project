@@ -18,8 +18,10 @@ export default function Weather(props) {
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
-      minimum: Math.round(response.data.temp_min),
-      maximum: Math.round(response.data.temp_max),
+      minimum: Math.round(response.data.main.temp_min),
+      maximum: Math.round(response.data.main.temp_max),
+      lon: response.data.coord.lon,
+      lat: response.data.coord.lat,
       date: new Date(response.data.dt * 1000),
     });
     setReady(true);
@@ -57,7 +59,7 @@ export default function Weather(props) {
           </button>
         </form>
         <WeatherDisplay data={weatherData} />
-        <ForecastDisplay />
+        <ForecastDisplay data={weatherData} />
       </div>
     );
   } else {
