@@ -24,19 +24,13 @@ export default function ForecastDisplay(props) {
   }
 
   if (ready) {
-   
+    console.log(forecast);
     return (
       <div className="row forecast">
-        {forecast.map(funcion(ForecastDay, index) {
-            if (index < 5){
-          return (
-        <div className="col" key={index}>
-          <ForecastDay data={ForecastDay} />
+        <div className="col">
+          <ForecastDay data={forecast[1]} />
         </div>
-        );
-       }
- })}
-</div>
+      </div>
     );
   } else {
     search();
