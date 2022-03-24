@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-
 import ForecastDay from "./ForecastDay";
-
 import "./ForecastDisplay.css";
 import axios from "axios";
 
@@ -22,8 +20,9 @@ export default function ForecastDisplay(props) {
   function search() {
     let lat = props.data.lat;
     let lon = props.data.lon;
+    let units = props.unitsChosen;
+    console.log(`from weather display ${units}`);
     const apiKey = "872f5f7a2f23b39c0dad793d7e25a56f";
-    let units = "metric";
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude={part}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(handleResponse);
   }
