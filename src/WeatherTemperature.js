@@ -16,11 +16,11 @@ export default function WeatherTemperature(props) {
 
   if (unit === "celsius") {
     const unitsChosen = "metric";
-    console.log(`from weather temperature celsius= ${unitsChosen}`);
+
     return (
       <div>
         <span>{Math.round(props.celsius)}</span>
-        <ForecastDisplay data={unitsChosen} />
+        <ForecastDisplay units={unitsChosen} />
         <span className="unit">
           <a href="/">
             <strong size="60px">°C</strong>
@@ -35,11 +35,11 @@ export default function WeatherTemperature(props) {
   } else {
     let fahrenheit = (props.celsius * 9) / 5 + 32;
     const unitsChosen = "imperial";
-    console.log(`from weather temperature F= ${unitsChosen}`);
+
     return (
       <div>
         <span>{Math.round(fahrenheit)}</span>
-        <ForecastDisplay data={unitsChosen} />
+        <ForecastDisplay units={unitsChosen} />
         <span className="unit">
           <a href="/" onClick={showCelsius}>
             °C {""}
