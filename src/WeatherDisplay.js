@@ -19,7 +19,7 @@ export default function WeatherDisplay(props) {
       <div className="weather-detail">
         <div className="row">
           <div className="col col-12 col-sm-6">
-            <WeatherIcons code={props.data.icon} size="60px" />
+            <WeatherIcons code={props.data.icon} size={60} />
 
             <div className="temperature">
               <span>

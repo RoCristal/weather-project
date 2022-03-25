@@ -22,7 +22,6 @@ export default function ForecastDisplay(props) {
   }
 
   if (ready) {
-    console.log(forecast);
     return (
       <div className="row forecast">
         <div className="col">
