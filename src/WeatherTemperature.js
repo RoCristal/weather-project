@@ -1,19 +1,15 @@
 import React, { useState } from "react";
-//import UnitForForecast from "./UnitForForecast";
 
 export default function WeatherTemperature(props) {
   const [unit, setUnit] = useState("celsius");
-  //const [unitForecast, setUnitForecast] = useState("celsius");
 
   function showFahrenheit(event) {
     event.preventDefault();
     setUnit("fahrenheit");
-    //setUnitForecast("imperial");
   }
 
   function showCelsius(event) {
     event.preventDefault();
-    //setUnitForecast("metric");
     setUnit("celsius");
   }
 
