@@ -23,16 +23,16 @@ export default function ForecastDisplay(props) {
 
   if (ready) {
     return (
-      <div className="row forecast">
-        <div className="col">
+      <div className="forecast">
+        <span>
           <ForecastDay data={forecast[1]} />
-        </div>
+        </span>
         {forecast.map(function (dailyForecast, index) {
           if (index > 0 && index < 5) {
             return (
-              <div className="col" key={index}>
+              <span key={index}>
                 <ForecastDay data={dailyForecast} />
-              </div>
+              </span>
             );
           } else {
             return null;

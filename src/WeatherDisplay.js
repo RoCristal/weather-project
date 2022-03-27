@@ -1,7 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcons from "./WeatherIcons";
-import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherDisplay(props) {
   return (
@@ -22,9 +21,8 @@ export default function WeatherDisplay(props) {
             <WeatherIcons code={props.data.icon} size={60} />
 
             <div className="temperature">
-              <span>
-                <WeatherTemperature celsius={props.data.temperature} />
-              </span>
+              <span>{Math.round(props.data.temperature)}</span>
+              <span className="unit">°C</span>
             </div>
           </div>
 
@@ -32,8 +30,10 @@ export default function WeatherDisplay(props) {
             <ul>
               <li>Humidity: {props.data.humidity}%</li>
               <li>Wind: {Math.round(props.data.wind)} km/h</li>
-              <li>
-                <strong>{props.data.maximum}°C</strong> | {props.data.minimum}°C
+              <li className="highLow">
+                High and low: <strong>{props.data.maximum}°C</strong> /{" "}
+                {props.data.minimum}
+                °C
               </li>
             </ul>
           </div>
