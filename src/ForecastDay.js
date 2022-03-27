@@ -38,9 +38,9 @@ export default function ForecastDay(props) {
           <span className="max">{maxTemp()}</span>/
           <span className="min">{minTemp()}</span>
         </div>
-        {/*<div className="col-sm-3 description">
+        <div className="col-sm-3 description">
           {props.data.weather[0].description}
-  </div>*/}
+        </div>
       </div>
     </div>
   );

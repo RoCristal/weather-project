@@ -1,5 +1,5 @@
 :root {
-  --dark-grey: #1a1316;
+  --dark-grey: #132743;
   --white: #ffffff;
 }
 
@@ -10,6 +10,7 @@
   padding: 16px;
   margin: 30px;
   line-height: 20px;
+  background-color: rgba(217, 179, 199, 1);
 }
 
 .weather-summary {
