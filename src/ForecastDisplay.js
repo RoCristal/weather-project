@@ -9,6 +9,7 @@ export default function ForecastDisplay(props) {
 
   function handleResponse(response) {
     setForecast(response.data.daily);
+
     setReady(true);
   }
 
@@ -19,14 +20,13 @@ export default function ForecastDisplay(props) {
     let units = "metric";
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude={part}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(handleResponse);
-    console.log(apiUrl);
   }
 
   if (ready) {
     return (
       <div className="forecast">
         <span>
-          <ForecastDay data={forecast[1]} />
+          <ForecastDay data={forecast[0]} />
         </span>
         {forecast.map(function (dailyForecast, index) {
           if (index > 1 && index < 6) {

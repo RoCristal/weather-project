@@ -55,6 +55,13 @@ export default function Weather(props) {
   if (ready) {
     return (
       <div className="weather">
+        <button
+          className="btn btn-outline-secondary btn-sm here"
+          type="submit"
+          onClick={getCurrentLocation}
+        >
+          Current temperature here
+        </button>
         <form onSubmit={handleSubmit} className="d-flex search-bar">
           <input
             onChange={handleCitySearch}
@@ -63,15 +70,11 @@ export default function Weather(props) {
             placeholder="Search for a city"
             aria-label="Search"
           />
-          <button className="btn btn-outline-secondary btn-sm" type="submit">
-            Search
-          </button>
           <button
-            className="btn btn-outline-secondary btn-sm"
+            className="btn btn-outline-secondary btn-sm search"
             type="submit"
-            onClick={getCurrentLocation}
           >
-            Here
+            Search
           </button>
         </form>
         <WeatherDisplay data={weatherData} />

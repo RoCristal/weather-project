@@ -1,5 +1,6 @@
 :root {
-  --dark-grey: #51524e;
+  --dark-grey: #1a1316;
+  --white: #ffffff;
 }
 
 .weather {
@@ -18,11 +19,13 @@
   text-align: center;
 }
 .form-control {
-  border: 1px solid #51524e !important;
+  border: 1px solid var(--white) !important;
+  margin: 3px;
+  background: transparent !important;
 }
 .form-control:focus {
-  border: 1px solid #51524e !important;
-  box-shadow: 0 0 0 0.25rem rgb(47 47 48 / 25%) !important;
+  border: 1px solid var(--white) !important;
+  box-shadow: 0 0 0 0.25rem rgba(131, 49, 119, 0.25) !important;
 }
 .weather h1 {
   font-size: 24px;
@@ -39,9 +42,7 @@
   line-height: 25px;
   font-weight: 400;
 }
-.highLow {
-  text-align: left;
-}
+
 .weather-detail {
   margin: 5px;
   padding: 10px;
@@ -60,13 +61,28 @@ canvas {
 }
 
 .unit {
-  font-size: 14px;
+  font-size: 16px;
   position: relative;
   margin-left: 5px;
-  top: -20px;
+  top: -25px;
 }
 
 a {
   text-decoration: none !important;
   color: var(--dark-grey) !important;
+}
+
+.btn {
+  margin: 3px;
+}
+
+.btn-outline-secondary {
+  color: var(--dark-grey) !important;
+  border-color: var(--white) !important;
+  font-weight: 400 !important;
+}
+.btn-outline-secondary:hover {
+  background-color: #cc878b !important;
+  color: var(--white) !important;
+  opacity: 0.7;
 }
