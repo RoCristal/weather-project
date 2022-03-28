@@ -60,6 +60,7 @@ export default function Weather(props) {
         <img
           src={location}
           className="location-icon"
+          alt="location-icon"
           href="https://www.flaticon.com/free-icons/location"
         ></img>
 
