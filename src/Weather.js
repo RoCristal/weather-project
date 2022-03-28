@@ -3,6 +3,7 @@ import axios from "axios";
 import WeatherDisplay from "./WeatherDisplay";
 import ForecastDisplay from "./ForecastDisplay";
 import "./Weather.css";
+import location from "./location.png";
 
 export default function Weather(props) {
   const [ready, setReady] = useState(false);
@@ -22,6 +23,7 @@ export default function Weather(props) {
       lon: response.data.coord.lon,
       lat: response.data.coord.lat,
       date: new Date(response.data.dt * 1000),
+      coordinates: response.data.coord,
     });
     setReady(true);
   }
@@ -55,6 +57,12 @@ export default function Weather(props) {
   if (ready) {
     return (
       <div className="weather">
+        <img
+          src={location}
+          className="location-icon"
+          href="https://www.flaticon.com/free-icons/location"
+        ></img>
+
         <button
           className="btn btn-outline-secondary btn-sm here"
           type="submit"
@@ -62,6 +70,7 @@ export default function Weather(props) {
         >
           Current temperature here
         </button>
+
         <form onSubmit={handleSubmit} className="d-flex search-bar">
           <input
             onChange={handleCitySearch}
@@ -77,6 +86,7 @@ export default function Weather(props) {
             Search
           </button>
         </form>
+
         <WeatherDisplay data={weatherData} />
         <ForecastDisplay data={weatherData} />
       </div>
