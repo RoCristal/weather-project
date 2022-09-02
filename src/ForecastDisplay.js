@@ -30,10 +30,10 @@ export default function ForecastDisplay(props) {
     return (
       <div className="forecast">
         <span>
-          <ForecastDay data={forecast[0]} />
+          <ForecastDay data={forecast[1]} />
         </span>
         {forecast.map(function (dailyForecast, index) {
-          if (index > 1 && index < 6) {
+          if (index > 1 && index < 7) {
             return (
               <span key={index}>
                 <ForecastDay data={dailyForecast} />
