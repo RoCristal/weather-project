@@ -24,9 +24,10 @@
   text-align: center;
 }
 .form-control {
-  border: 1px solid rgb(82, 81, 81) !important;
+  border: 1px solid rgb(189, 189, 189) !important;
   margin: 3px;
   background: var(--white) !important;
+  padding-top: 15px ;
 }
 .form-control:focus {
   border: 1px solid var(--white) !important;
@@ -98,5 +99,11 @@ button{
       font-size: 25px;
       line-height: 1;
       padding-left: 5px;
+    }
+   .unit {
+     font-size: 10px;
+      position: relative;
+      margin-left: 5px;
+      top: -25px;
     }
 }
