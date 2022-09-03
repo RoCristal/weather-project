@@ -1,16 +1,28 @@
 .App {
-  max-width: auto;
+  max-width: 960px;
   display: block;
   margin: 0 auto;
 }
 
-.App footer {
-  font-size: 15px;
-  margin: 0 30px;
-}
+ .fixed-header {
+   top: 0;
+   background-color: var(--light-pink);
+   color: var(--dark-pink);
+ }
+ .font{
+  margin-left: 20px;
+ }
+
+ .fixed-footer {
+   bottom: 0;
+  background-color: var(--light-pink);
+  color: var(--dark-pink);
+  text-align: center;
+ }
 
 :root {
-  --dark-grey: #BB577B;
+  --dark-pink: #BB577B;
+  --light-pink: #D1A9B6;
   --white: #f1f1f1;
   --yellow: #e2dac2;
 }

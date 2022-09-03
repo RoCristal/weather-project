@@ -6,18 +6,12 @@ export default function App() {
   return (
     <div className="App">
       <div className="container-fluid">
+        <div className="fixed-header"><div className="font">Weather forecast by Ro</div></div>
         <Weather defaultCity="London" />
 
-        <footer>
-          Coded by Romina Cristaldo. {""}Open source on
-          <a
-            href="https://github.com/RoCristal/weather-project"
-            target="_blank"
-            rel="noopener  noreferrer"
-          >
-            <strong> GitHub</strong>
-          </a>
-        </footer>
+<div className="fixed-footer">
+        <div className="font-footer">GitHub LinkedIn</div>        
+    </div>
       </div>
     </div>
   );
