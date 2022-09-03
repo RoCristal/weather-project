@@ -93,3 +93,10 @@ button{
   color: var(--white) !important;
   opacity: 0.7;
 }
+@media (max-width: 576px) {
+  .temperature {
+      font-size: 25px;
+      line-height: 1;
+      padding-left: 5px;
+    }
+}
