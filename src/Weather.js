@@ -3,7 +3,11 @@ import axios from "axios";
 import WeatherDisplay from "./WeatherDisplay";
 import ForecastDisplay from "./ForecastDisplay";
 import "./Weather.css";
-import location from "./location.png";
+import here from "./images/here.png";
+import glass from "./images/magnifying-glass.png";
+
+
+
 
 export default function Weather(props) {
   const [ready, setReady] = useState(false);
@@ -57,34 +61,35 @@ export default function Weather(props) {
   if (ready) {
     return (
       <div className="weather">
-        <img
-          src={location}
+        <form onSubmit={handleSubmit} className="d-flex search-bar">
+          <button
+          className="btn btn-outline-secondary btn-sm border"
+          type="submit"
+          onClick={getCurrentLocation}
+        ><img
+          src={here}
           className="location-icon"
           alt="location-icon"
           href="https://www.flaticon.com/free-icons/location"
         ></img>
-
-        <button
-          className="btn btn-outline-secondary btn-sm here"
-          type="submit"
-          onClick={getCurrentLocation}
-        >
-          Current temperature here
         </button>
-
-        <form onSubmit={handleSubmit} className="d-flex search-bar">
           <input
             onChange={handleCitySearch}
             className="form-control me-2"
             type="search"
-            placeholder="Search for a city"
+            placeholder="Search for a city..."
             aria-label="Search"
           />
           <button
-            className="btn btn-outline-secondary btn-sm search"
+            className="btn btn-outline-secondary btn-sm border"
             type="submit"
           >
-            Search
+            <img
+          src={glass}
+          className="location-icon"
+          alt="search-icon"
+          href="https://www.flaticon.com/free-icons/location"
+        ></img>
           </button>
         </form>
 

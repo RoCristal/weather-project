@@ -1,5 +1,5 @@
 .App {
-  max-width: 800px;
+  max-width: 600px;
   display: block;
   margin: 0 auto;
 }
@@ -11,5 +11,5 @@
 
 :root {
   --dark-grey: #132743;
-  --white: #ffffff;
+  --white: #f1f1f1;
 }

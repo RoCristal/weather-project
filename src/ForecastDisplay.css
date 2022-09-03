@@ -1,18 +1,15 @@
-.forecastDay {
-  text-align: center;
-  margin-bottom: 10px;
-  padding: 5px;
-}
 
 .forecast canvas {
   display: block;
   margin: 5px auto;
-  float: none;
+  float: left;
+  padding-left: 20px;
 }
 
 .day {
   font-weight: 600;
   padding-top: 10px;
+  float: left;
 }
 .max {
   font-weight: bolder;
@@ -21,8 +18,9 @@
   margin-left: 5px;
 }
 
-.description,
 .temp {
   text-transform: capitalize;
   padding-top: 10px;
+  float: left;
+  margin-left: 10px;
 }

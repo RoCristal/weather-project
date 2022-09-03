@@ -27,21 +27,28 @@ export default function ForecastDay(props) {
   }
 
   return (
-    <div className="forecastDay border rounded">
-      <div className="row justify-content-start">
-        <div className="col-sm-3  day">{day()}</div>
-        <div className="col-sm-3">
-          <WeatherIcons code={props.data.weather[0].icon} size={40} />
-        </div>
+    <div className="weather-summary border rounded">
 
-        <div className="col-sm-3 temp">
+<div className="row">
+  <div className="col-sm-6">    
+     <WeatherIcons code={props.data.weather[0].icon} size={40} />
+     <div className="col-sm-3 temp">
           <span className="max">{maxTemp()}</span>/
           <span className="min">{minTemp()}</span>
         </div>
+    </div>
+    <div className="col-sm-6"> 
+      <span className="col day">{day()}</span> </div>
+  </div>
+
+
+     {/* <div className="row justify-content-start">
+        <div className="col-sm-3 temp">
+          <WeatherIcons code={props.data.weather[0].icon} size={40} />
+        </div>
         <div className="col-sm-3 description">
           {props.data.weather[0].description}
-        </div>
-      </div>
+        </div> </div>*/}
     </div>
   );
 }
