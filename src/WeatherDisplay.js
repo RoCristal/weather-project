@@ -9,7 +9,7 @@ export default function WeatherDisplay(props) {
     <div className="WeatherDisplay ">
       <div className="weather-summary border rounded">
         <div className="row">
-          <div className="col col-12 col-sm-6 icon">
+          <div className="col-6 icon">
         <h1>{props.data.city}</h1>
         
         <WeatherIcons code={props.data.icon} size={60} />
@@ -21,7 +21,7 @@ export default function WeatherDisplay(props) {
             </div></div>
           
 
-          <div className="col col-12 col-sm-6 d-flex align-items-center">
+          <div className="col-6 d-flex align-items-center">
             <ul>
               
               <li><FormattedDate date={props.data.date} /></li>
