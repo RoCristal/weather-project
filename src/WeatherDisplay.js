@@ -9,9 +9,9 @@ export default function WeatherDisplay(props) {
     <div className="WeatherDisplay ">
       <div className="weather-summary border rounded">
         <div className="row">
-          <div className="col col-12 col-sm-6 icon">
+          <div className="col col-12 col-sm-6 col-xs-6icon">
         <h1>{props.data.city}</h1>
-        <br></br>
+        
         <WeatherIcons code={props.data.icon} size={60} />
          <div className="temperature">
               <span className="tempVal">
@@ -21,7 +21,7 @@ export default function WeatherDisplay(props) {
             </div></div>
           
 
-          <div className="col col-12 col-sm-6">
+          <div className="col col-12 col-sm-6 col-xs-6">
             <ul>
               
               <li><FormattedDate date={props.data.date} /></li>
