@@ -75,7 +75,7 @@ export default function Weather(props) {
         </button>
           <input
             onChange={handleCitySearch}
-            className="form-control form-control-sm"
+            className="form-control"
             type="search"
             placeholder="Search for a city..."
             aria-label="Search"
