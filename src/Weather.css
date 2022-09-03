@@ -94,7 +94,7 @@ button{
   color: var(--white) !important;
   opacity: 0.7;
 }
-@media (max-width: 576px) {
+@media (max-width: 375px) {
   .temperature {
       font-size: 25px;
       line-height: 1;
@@ -105,5 +105,5 @@ button{
       position: relative;
       margin-left: 5px;
       top: -25px;
-    }
+        }
 }
