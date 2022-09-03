@@ -63,7 +63,7 @@ export default function Weather(props) {
       <div className="weather">
         <form onSubmit={handleSubmit} className="d-flex search-bar">
           <button
-          className="btn btn-outline-secondary btn-sm border"
+          className="weather-summary border rounded"
           type="submit"
           onClick={getCurrentLocation}
         ><img
@@ -75,13 +75,13 @@ export default function Weather(props) {
         </button>
           <input
             onChange={handleCitySearch}
-            className="form-control me-2"
+            className="form-control form-control-sm"
             type="search"
             placeholder="Search for a city..."
             aria-label="Search"
           />
           <button
-            className="btn btn-outline-secondary btn-sm border"
+            className="weather-summary border rounded"
             type="submit"
           >
             <img

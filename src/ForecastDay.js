@@ -40,15 +40,6 @@ export default function ForecastDay(props) {
     <div className="col-6"> 
       <span className="col day">{day()}</span> </div>
   </div>
-
-
-     {/* <div className="row justify-content-start">
-        <div className="col-sm-3 temp">
-          <WeatherIcons code={props.data.weather[0].icon} size={40} />
-        </div>
-        <div className="col-sm-3 description">
-          {props.data.weather[0].description}
-        </div> </div>*/}
     </div>
   );
 }
