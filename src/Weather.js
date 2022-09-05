@@ -75,7 +75,7 @@ export default function Weather(props) {
         </button>
 
           <input
-           className="weather-summary border input"
+           className="weather-summary input"
             onChange={handleCitySearch}
             type="search"
             placeholder="Search for a city..."
