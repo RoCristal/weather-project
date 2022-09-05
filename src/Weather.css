@@ -5,7 +5,7 @@
 }
 .weather {
   border-radius: 8px;
-  color: var(--dark-grey);
+  color: var(--dark-pink);
   padding: 10px;
   margin: 15px;
   line-height: 20px;
@@ -20,16 +20,26 @@
   text-align: center;
 }
 
-.input.weather-summary{
+input[type=search] {
   width: 100%;
-  margin-left:10px ;
-  margin-right: 10px;
-   border: 1px solid var(--yellow) !important;
-   padding: 10px;
-  background: var(--white) !important;
-  border-radius: 3px;
-  box-shadow: 0 1px 2px rgb(58 57 51 / 40%);
+background: var(--white) !important;
+  box-sizing: border-box;
+  border: 1px solid var(--light-pink);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  padding: 10px;
+  margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 5px;
 }
+
+input[type=search]:focus {
+  border: 3px solid var(--dark-pink);
+}
+
+
 
 .weather h1 {
   text-align: start;
@@ -76,11 +86,15 @@ canvas {
 
 a {
   text-decoration: none !important;
-  color: var(--dark-grey) !important;
+  color: var(--dark-pink) !important;
 }
+a:hover {
+  font-weight: 600;
+}
+
 button{
   background-color: var(--white)!important;
-  color: var(--dark-grey) !important;
+  color: var(--dark-pink) !important;
     border-color: var(--white) !important;
     font-weight: 400 !important;
     text-transform: capitalize;
@@ -88,15 +102,15 @@ button{
       margin-top: 10px;
       padding: 10px;
       text-align: center;
-    
+}
+
+button:hover {
+background-color: var(--light-pink) !important;
+opacity: 0.7;
+transition: 0.5s;
 }
 
 
-.btn-outline-secondary:hover {
-  background-color: #BB577B !important;
-  color: var(--white) !important;
-  opacity: 0.7;
-}
 @media (max-width: 375px) {
   .temperature {
       font-size: 25px;
