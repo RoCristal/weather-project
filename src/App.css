@@ -12,10 +12,30 @@
     padding-bottom: 15px;
     margin-right: 25px;
     margin-left: 25px;
+    position: relative;
  }
  .font{
   margin-left: 20px;
  }
+ .fixed-header::after {
+   position: absolute;
+   content: " ";
+   width: 0%;
+   height: 2px;
+   background-color: var(--dark-pink);
+   left: 50%;
+   bottom: -2px;
+   transform: all 0.3s ease-in-out;
+ }
+ .fixed-header:hover{
+  cursor: pointer;
+ }
+.fixed-header:hover::after{
+  cursor: pointer;
+  width: 100%;
+  left: 0;
+}
+
 
  .fixed-footer {
    bottom: 0;
@@ -27,6 +47,11 @@
   margin-right: 25px;
   margin-left: 25px;
  }
+.fixed-footer:hover {
+   cursor: pointer;
+   text-decoration: underline;
+ }
+
 
 
 

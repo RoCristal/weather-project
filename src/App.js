@@ -18,18 +18,20 @@ export default function App() {
 
 <div className="fixed-footer">
         <div className="font-footer">
-           <a className="footer-left"
+          <div className="row"> 
+          <div  className="col"><a className="footer-left"
                 href="https://github.com/RoCristal/weather-project"
                 title="Dictionary"
                 target="_blank" rel="noreferrer"
-              >GitHub</a> 
-               <a className="footer-right"
+              >GitHub</a> </div>
+          <div className="col"><a className="footer-right"
                 href="https://www.linkedin.com/in/rominacristaldo/"
                 title="Dictionary"
                 target="_blank" rel="noreferrer"
-              >_____________LinkedIn</a> 
-          
-           </div>        
+              >LinkedIn</a>
+              </div>
+              </div>
+              </div>        
     </div>
       </div>
     </div>
