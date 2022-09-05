@@ -73,13 +73,16 @@ export default function Weather(props) {
           href="https://www.flaticon.com/free-icons/location"
         ></img>
         </button>
+
           <input
+           className="weather-summary border rounded input"
             onChange={handleCitySearch}
-            className="form-control"
             type="search"
             placeholder="Search for a city..."
             aria-label="Search"
           />
+
+
           <button
             className="weather-summary border rounded"
             type="submit"

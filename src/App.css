@@ -8,6 +8,10 @@
    top: 0;
    background-color: var(--light-pink);
    color: var(--dark-pink);
+   padding-top: 5px;
+    padding-bottom: 15px;
+    margin-right: 25px;
+    margin-left: 25px;
  }
  .font{
   margin-left: 20px;
@@ -17,8 +21,14 @@
    bottom: 0;
   background-color: var(--light-pink);
   color: var(--dark-pink);
-  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  text-align:center;
+  margin-right: 25px;
+  margin-left: 25px;
  }
+
+
 
 :root {
   --dark-pink: #BB577B;

@@ -6,28 +6,34 @@
 .weather {
   border-radius: 8px;
   color: var(--dark-grey);
-  padding: 16px;
-  margin: 30px;
+  padding: 10px;
+  margin: 15px;
   line-height: 20px;
   background-color: var(--yellow);
 }
 
 .weather-summary {
   text-transform: capitalize;
-  margin-bottom: 20px;
-  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-top: 5px;
   padding: 10px;
   text-align: center;
 }
 
-.form-control {
-  border: 1px solid var(--yellow) !important;
+.input.weather-summary{
+  width: 100%;
+  margin-left:10px ;
+  margin-right: 10px;
+   border: 1px solid var(--yellow) !important;
+   padding: 10px;
   background: var(--white) !important;
+    
 }
 
-.form-control:focus {
-  border: 1px solid var(--white) !important;
-}
+
+
+
+
 .weather h1 {
   text-align: start;
   font-size: 24px;
