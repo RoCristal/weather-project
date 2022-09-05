@@ -33,6 +33,7 @@ background: var(--white) !important;
     margin-right: 10px;
     padding: 10px;
     border-radius: 5px;
+    text-align: start;
 }
 
 input[type=search]:focus {
